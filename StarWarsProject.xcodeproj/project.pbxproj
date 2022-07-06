@@ -17,6 +17,20 @@
 		E9C99559287509C1002BA085 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9952F287509C0002BA085 /* ContentView.swift */; };
 		E9C9955A287509C1002BA085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C99530287509C1002BA085 /* Assets.xcassets */; };
 		E9C9955B287509C1002BA085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C99530287509C1002BA085 /* Assets.xcassets */; };
+		E9C9956B2875188F002BA085 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9956A2875188F002BA085 /* PersistenceController.swift */; };
+		E9C9956C2875188F002BA085 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9956A2875188F002BA085 /* PersistenceController.swift */; };
+		E9C9956E287518A8002BA085 /* Character_JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9956D287518A8002BA085 /* Character_JSON.swift */; };
+		E9C9956F287518A8002BA085 /* Character_JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9956D287518A8002BA085 /* Character_JSON.swift */; };
+		E9C99571287518BC002BA085 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C99570287518BC002BA085 /* APICall.swift */; };
+		E9C99572287518BC002BA085 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C99570287518BC002BA085 /* APICall.swift */; };
+		E9C99574287518D1002BA085 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C99573287518D1002BA085 /* NetworkHelper.swift */; };
+		E9C99575287518D1002BA085 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C99573287518D1002BA085 /* NetworkHelper.swift */; };
+		E9C99577287518F7002BA085 /* SwiftUIDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C99576287518F7002BA085 /* SwiftUIDetailView.swift */; };
+		E9C99578287518F7002BA085 /* SwiftUIDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C99576287518F7002BA085 /* SwiftUIDetailView.swift */; };
+		E9C9957B28751912002BA085 /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9C9957928751912002BA085 /* StarWars.xcdatamodeld */; };
+		E9C9957C28751912002BA085 /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9C9957928751912002BA085 /* StarWars.xcdatamodeld */; };
+		E9C9957E2875199E002BA085 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9957D2875199E002BA085 /* Date+Extensions.swift */; };
+		E9C9957F2875199E002BA085 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9957D2875199E002BA085 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,13 @@
 		E9C9954E287509C1002BA085 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C99552287509C1002BA085 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E9C99554287509C1002BA085 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		E9C9956A2875188F002BA085 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		E9C9956D287518A8002BA085 /* Character_JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character_JSON.swift; sourceTree = "<group>"; };
+		E9C99570287518BC002BA085 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		E9C99573287518D1002BA085 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		E9C99576287518F7002BA085 /* SwiftUIDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDetailView.swift; sourceTree = "<group>"; };
+		E9C9957A28751912002BA085 /* StarWars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWars.xcdatamodel; sourceTree = "<group>"; };
+		E9C9957D2875199E002BA085 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +119,11 @@
 			isa = PBXGroup;
 			children = (
 				E9C9952E287509C0002BA085 /* StarWarsProjectApp.swift */,
-				E9C9952F287509C0002BA085 /* ContentView.swift */,
+				E9C9958028751EBB002BA085 /* Views */,
+				E9C9958428751EEA002BA085 /* CoreData */,
+				E9C9958328751EDF002BA085 /* Model */,
+				E9C9958228751ECE002BA085 /* Networking */,
+				E9C9958128751EC1002BA085 /* Extensions */,
 				E9C99530287509C1002BA085 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -139,6 +164,49 @@
 				E9C99554287509C1002BA085 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		E9C9958028751EBB002BA085 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9C9952F287509C0002BA085 /* ContentView.swift */,
+				E9C99576287518F7002BA085 /* SwiftUIDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9C9958128751EC1002BA085 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9C9957D2875199E002BA085 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9C9958228751ECE002BA085 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E9C99570287518BC002BA085 /* APICall.swift */,
+				E9C99573287518D1002BA085 /* NetworkHelper.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E9C9958328751EDF002BA085 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9C9956D287518A8002BA085 /* Character_JSON.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9C9958428751EEA002BA085 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E9C9957928751912002BA085 /* StarWars.xcdatamodeld */,
+				E9C9956A2875188F002BA085 /* PersistenceController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +367,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C9956B2875188F002BA085 /* PersistenceController.swift in Sources */,
+				E9C9956E287518A8002BA085 /* Character_JSON.swift in Sources */,
+				E9C9957E2875199E002BA085 /* Date+Extensions.swift in Sources */,
+				E9C99571287518BC002BA085 /* APICall.swift in Sources */,
 				E9C99558287509C1002BA085 /* ContentView.swift in Sources */,
+				E9C9957B28751912002BA085 /* StarWars.xcdatamodeld in Sources */,
+				E9C99577287518F7002BA085 /* SwiftUIDetailView.swift in Sources */,
+				E9C99574287518D1002BA085 /* NetworkHelper.swift in Sources */,
 				E9C99556287509C1002BA085 /* StarWarsProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +383,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C9956C2875188F002BA085 /* PersistenceController.swift in Sources */,
+				E9C9956F287518A8002BA085 /* Character_JSON.swift in Sources */,
+				E9C9957F2875199E002BA085 /* Date+Extensions.swift in Sources */,
+				E9C99572287518BC002BA085 /* APICall.swift in Sources */,
 				E9C99559287509C1002BA085 /* ContentView.swift in Sources */,
+				E9C9957C28751912002BA085 /* StarWars.xcdatamodeld in Sources */,
+				E9C99578287518F7002BA085 /* SwiftUIDetailView.swift in Sources */,
+				E9C99575287518D1002BA085 /* NetworkHelper.swift in Sources */,
 				E9C99557287509C1002BA085 /* StarWarsProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +783,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9C9957928751912002BA085 /* StarWars.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9C9957A28751912002BA085 /* StarWars.xcdatamodel */,
+			);
+			currentVersion = E9C9957A28751912002BA085 /* StarWars.xcdatamodel */;
+			path = StarWars.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E9C99529287509C0002BA085 /* Project object */;
 }
