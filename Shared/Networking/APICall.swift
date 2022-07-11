@@ -23,7 +23,8 @@ public func APICall(_ httpRequest: HTTPRequest, completion: @escaping (APIRespon
 }
 
 public struct HTTPRequest {
-   public var method: HTTPMethods
+    public var method: HTTPMethods
+    public var urlString: String
 }
 
 public enum HTTPMethods: String {
@@ -39,8 +40,7 @@ public struct APIResponse {
 
 extension HTTPRequest {
     func asURLRequest() -> URLRequest? {
-        let fullPath = NetworkHelper.baseURL
-        guard let url = URL(string: fullPath) else { return nil }
+        guard let url = URL(string: self.urlString) else { return nil }
         var request = URLRequest(url: url)
         request.httpMethod = self.method.rawValue
         return request

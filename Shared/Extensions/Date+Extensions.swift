@@ -12,9 +12,8 @@ extension Date {
         let originalDateFormatter = DateFormatter()
         originalDateFormatter.dateFormat = "yyyy-MM-dd"
         guard let date = originalDateFormatter.date(from: originalDate ?? "") else {return ""}
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d, yyyy"
-        let newDate = formatter.string(from: date)
+        originalDateFormatter.dateFormat = "MMM d, yyyy"
+        let newDate = originalDateFormatter.string(from: date)
         return newDate
     }
 }

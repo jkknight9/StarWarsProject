@@ -24,16 +24,14 @@ struct ContentView: View {
                 NavigationLink(destination: SwiftUIDetailView(individual: individual)) {
                     VStack(alignment: .leading) {
                         HStack {
-                            AsyncImage(url: URL(string: individual.profilePicture ?? "")) { image in
-                                image.resizable()
-                            } placeholder: {
-                                Color.gray
-                            }
-                            
-                            .frame(width: 80, height: 80)
-                            .clipShape(Circle())
-                            .scaledToFit()
-                            
+                            if individual.profilePictureData != nil {
+                                Image(uiImage: UIImage(data: individual.profilePictureData!) ?? UIImage())
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .clipShape(Circle())
+                                    .frame(width: 80, height: 80)
+                        }
+
                             Text("\(individual.firstName ?? "") \(individual.lastName ?? "")")
                                 .font(.title)
                         }
@@ -68,6 +66,19 @@ struct ContentView: View {
             individual.birthdate = character.birthdate
             individual.forceSensitive = character.forceSensitive
             individual.profilePicture =  character.profilePicture
+            if individual.profilePictureData == nil {
+                StarWarsCharacters.shared.loadFrom(urlString: individual.profilePicture ?? "") { result in
+                    switch result {
+                    case .success(let data):
+                        viewContext.perform {
+                            individual.profilePictureData = data
+                            try? viewContext.save()
+                        }
+                    case .failure:
+                        break
+                    }
+                }
+            }
             individual.affiliation = character.affiliation
         }
         try? viewContext.save()

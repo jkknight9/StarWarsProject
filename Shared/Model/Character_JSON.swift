@@ -33,7 +33,7 @@ class StarWarsCharacters : ObservableObject {
     }()
     
     func fetchStarWarsCharacters(callback: @escaping (Result<[StarWarsCharacter], NSError>) -> Void) {
-        let request = HTTPRequest(method: .GET)
+        let request = HTTPRequest(method: .GET, urlString: NetworkHelper.baseURL)
         APICall(request) { response in
             if let error = response.error {
                 print(error)
@@ -46,6 +46,18 @@ class StarWarsCharacters : ObservableObject {
                     print(error)
                     callback(.failure(error as NSError))
                 }
+            }
+        }
+    }
+    
+    func loadFrom(urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let request = HTTPRequest(method: .GET, urlString: urlString)
+        APICall(request) { response in
+            if let error = response.error {
+                print(error)
+                completion(.failure(error))
+            } else if let data = response.data {
+                completion(.success(data))
             }
         }
     }
