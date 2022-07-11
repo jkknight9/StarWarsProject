@@ -26,12 +26,6 @@ class StarWarsCharacters : ObservableObject {
     static let shared = StarWarsCharacters()
     @Published var characters = [StarWarsCharacter]()
     
-    var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter
-    }()
-    
     func fetchStarWarsCharacters(callback: @escaping (Result<[StarWarsCharacter], NSError>) -> Void) {
         let request = HTTPRequest(method: .GET, urlString: NetworkHelper.baseURL)
         APICall(request) { response in

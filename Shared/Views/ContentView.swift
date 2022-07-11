@@ -33,7 +33,7 @@ struct ContentView: View {
                         }
 
                             Text("\(individual.firstName ?? "") \(individual.lastName ?? "")")
-                                .font(.title)
+                                .font(.body)
                         }
                         Spacer()
                     }
